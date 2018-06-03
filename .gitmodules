@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/paisa-wp-theme"]
+	path = wp-content/themes/paisa-wp-theme
+	url = git@github.com:callum-bennett/paisa-wp-theme.git

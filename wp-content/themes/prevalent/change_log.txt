@@ -1,0 +1,14 @@
+Version 1.0.0
+i) Intial version Release
+
+Version 1.1.0
+i) theme updated as per new guideline.
+
+Version 1.2.0
+i) Minor issues solved
+
+Version 1.3.0
+i) fixed all issues as per reviewer pointed.
+
+Version 1.4.0
+i) theme updated more unique as per reviewer .

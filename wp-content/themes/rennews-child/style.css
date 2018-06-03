@@ -1,0 +1,180 @@
+/*
+Theme Name: RenNews Child
+Description: RenNews theme is a responsive Wordpress Theme that can be used for blogs, online magazines any other awesome websites. Theme can be translated easily into over 46 languages : Arabic (العربية), Chinese (简体中文), Danish (Dansk), Dutch (Nederlands), French (Français), German (Deutsch), Italian (Italiano), Japanese (日本語), Korean (한국어), Polish (Polski), Portuguese (Português), Romanian (Română), Russian (Русский), Spanish (Spain) (Español), Turkish (Türkçe), Ukrainian (Українська) and more...
+Author: Madalin Milea
+Author URI: http://madalinm.com
+Template: mh-newsdesk-lite
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, theme-options, threaded-comments, full-width-template, translation-ready, rtl-language-support
+*/
+
+@import url("../mh-newsdesk-lite/style.css");
+
+
+@media screen and (max-width: 700px) {
+
+    .content-lead-title {
+
+        font-size: 1.375rem;
+
+    }
+}
+
+
+.button span {
+
+    background: #FE0404;
+    font-family: 'Open Sans';
+
+}
+
+
+#mh-wrapper, h1, h2, h3, h4, h5, h6, .search-form input, .header-sub li a, .widget-list li, .cat-item, .page_item, .sb-widget .menu-item, .footer-widgets .menu-item, .social-nav ul li a, a, .button span, .social-button span, .main-nav li {
+
+    -moz-transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+
+}
+
+.search-form input {
+
+    text-transform: none;
+
+}
+
+.content-lead-title {
+
+    text-transform: none;
+}
+
+.widget-title span {
+
+    background: #CCDEE8 !important;
+
+}
+
+.widget-title {
+
+    text-align: center;
+    padding: 8px 0;
+    color: #040404;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+
+}
+
+.widget-title a{
+
+    text-align: center;
+    padding: 8px 0;
+    color: #040404;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+
+}
+
+
+.widget-title a:hover {
+    display: none;
+}
+
+.content-lead-title {
+
+    font-size: 22px;
+    line-height: 26px;
+
+}
+
+
+.cp-title-xl {
+
+    font-size: 22px;
+    line-height: 26px;
+
+}
+
+.entry-title, .page-title {
+
+    text-transform: none;
+
+}
+
+.widget-list > li {
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4;
+
+}
+
+.cp-title-small {
+
+    line-height: 1.3;
+
+}
+
+.content-grid-title {
+
+    line-height: 1.3;
+
+}
+
+.content-list-title {
+
+    line-height: 1.3;
+    text-transform: none;
+}
+
+
+.main-nav li a {
+
+    font-family: 'Open Sans';
+
+}
+
+.ticker-title {
+
+    font-family: 'Open Sans';
+
+}
+
+.ticker-item {
+
+    font-family: 'Open Sans';
+
+}
+
+.entry-title, .page-title {
+
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+
+}.logo-title {
+
+     color: #e41609;
+     text-align: center;
+
+ }
+
+.logo-tagline {
+
+    text-align: center;
+
+}
+
+.menu_nav ul {
+    list-style: none;
+    margin: 0 auto;
+    width: 85%;
+}
+
+
+
+
