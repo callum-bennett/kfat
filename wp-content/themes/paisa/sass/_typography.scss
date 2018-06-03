@@ -1,0 +1,27 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title {
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+a {
+  transition: color 0.3s;
+}
+a,
+a:hover {
+  color: #ff6b7e;
+}
+.bigtext {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+}

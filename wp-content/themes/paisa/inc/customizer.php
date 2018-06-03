@@ -44,18 +44,6 @@ function paisa_customize_register( $wp_customize ) {
         'type'        => 'text',
         'settings'    => 'header_title',
     ) );
-    // Setting: Hero subtitle.
-    $wp_customize->add_setting( 'header_subtitle', array(
-        'sanitize_callback'    => 'wp_kses_post',
-        'default'              => __( 'Scroll down to begin your adventure', 'paisa')
-    ) );
-    // Control: Hero subtitle
-    $wp_customize->add_control( 'header_subtitle', array(
-        'label'       => __( 'Hero subtitle', 'paisa' ),
-        'section'     => 'paisa_section_header',
-        'type'        => 'text',
-        'settings'    => 'header_subtitle',
-    ) );    
 	// Setting: Typed strings.
 	$wp_customize->add_setting( 'typed_strings', array(
 		'sanitize_callback'    => 'wp_kses_post',

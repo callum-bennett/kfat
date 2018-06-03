@@ -22,4 +22,18 @@
 <?php wp_footer(); ?>
 
 </body>
+<script>
+    // @todo put this is correct place
+  (function($) {
+    var height = window.innerHeight;
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      if ((scroll + height*0.1) > height) {
+        $('.site-header').addClass('opaque');
+      } else {
+        $('.site-header').removeClass('opaque');
+      }
+    });
+  })(jQuery);
+</script>
 </html>

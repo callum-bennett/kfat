@@ -24,6 +24,7 @@
         enable_page_level_ads: true
       });
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Anaheim|Lato:300,400,700" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>

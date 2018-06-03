@@ -42,26 +42,12 @@ wow.init();
 	    });
 })( jQuery );
 
-/* Sticky menu */
-(function($) {
-
-	function stickyHeader() {
-		if ( matchMedia( 'only screen and (min-width: 1024px)' ).matches ) {
-			$('.sticky-header .site-header').sticky({
-				topSpacing:0,
-				responsiveWidth: true
-			});
-
-			var headerHeight = $('.site-header').outerHeight();
-			$('#masthead-sticky-wrapper').css('min-height', headerHeight);
-		} else {
-			$('.sticky-header .site-header').unstick();
-		}
-	}
-	$(document).ready( stickyHeader );
-	$(window).on('resize', stickyHeader );
-
-})( jQuery );
+$(window).scroll(function() {
+  var height = $(window).scrollTop();
+  if(height  > some_number) {
+    // do something
+  }
+});
 
 /* Social links in new window */
 (function($) {

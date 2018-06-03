@@ -13,6 +13,7 @@ $layout = 'masonry-fullwidth';
 		<main id="main" class="site-main" role="main">
 
 		<?php
+
 		if ( have_posts() ) : ?>
 			<div class="posts-loop">
 			<?php

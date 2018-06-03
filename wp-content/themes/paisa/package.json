@@ -4,10 +4,10 @@
   "description": "=== Paisa ===",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss styles.css -w",
-    "compile:sass": "node-sass sass/main.scss styles.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' styles.css -o styles.css",
-    "compress:css": "node-sass styles.css styles.css --output-style compressed",
+    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "compile:sass": "node-sass sass/main.scss style.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' style.css -o style.css",
+    "compress:css": "node-sass style.css style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "Callum Bennett",

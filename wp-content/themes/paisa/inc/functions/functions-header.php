@@ -6,18 +6,7 @@
  */
 
 
-/**
- * Body classes
- */
-function paisa_sticky_header($classes) {
 
-	$sticky = get_theme_mod('sticky_menu', 'sticky-header');
-
-	$classes[] = esc_attr( $sticky );
-
-	return $classes;
-}
-add_filter( 'body_class', 'paisa_sticky_header' );
 
 /**
  * Site title, logo and menu bar
@@ -86,18 +75,20 @@ function paisa_header_hero() {
 	$header_animated 	= paisa_typed_strings();
 	$header_subtitle	= get_theme_mod( 'header_subtitle', __( 'Scroll down to begin your adventure', 'paisa') );
 	$header_media		= paisa_media_check();
+	$header_image       = get_header_image();
 	?>
 
-	<div class="paisa-hero-area <?php echo $header_media; ?>">
-		<?php 
-		if ( $header_media == 'has-media' ) {
-			the_custom_header_markup();
-		}
+	<div class="paisa-hero-area <?php echo $header_media; ?>"
+	    <?php echo ($header_image ? 'style="background-image: url('.$header_image.')"' : ''); ?>
+    ">
+		<?php
+//		if ( $header_media == 'has-media' ) {
+//			the_custom_header_markup();
+//		}
 		?>
 		<div class="header-text clearfix">
 		<?php if ( is_front_page() ) : ?>
 			<h2><?php echo wp_kses_post( $header_title ); ?> <span class="typed-element"><?php echo wp_kses_post( $header_animated ); ?></span></h2>
-			<p><?php echo wp_kses_post( $header_subtitle ); ?></p>
 		<?php elseif ( is_single() ) : ?>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php elseif ( class_exists( 'Woocommerce') && is_woocommerce() ) : ?>

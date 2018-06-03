@@ -127,7 +127,7 @@ function paisa_scripts() {
 
 	wp_enqueue_script( 'paisa-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),'', true );
 
-	wp_enqueue_script( 'paisa-main', get_template_directory_uri() . '/js/main.min.js', array('jquery', 'imagesloaded'),'', true );
+	wp_enqueue_script( 'paisa-main', get_template_directory_uri() . '/js/main.js', array('jquery', 'imagesloaded'),'', true );
 
 	wp_enqueue_script( 'paisa-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
