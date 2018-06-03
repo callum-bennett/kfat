@@ -237,3 +237,20 @@ require get_template_directory() . '/inc/styles.php';
  * Woocommerce
  */
 require get_template_directory() . '/woocommerce/woocommerce.php';
+
+/**
+ * Custom function to store metadata for post views
+ *
+ * @param $postID
+ */
+function set_post_views($postID) {
+    $countKey = 'post_views_count';
+    $count = get_post_meta($postID, $countKey, true);
+    if ($count == '') {
+        delete_post_meta($postID, $countKey);
+        add_post_meta($postID, $countKey, '0');
+    } else {
+        $count++;
+        update_post_meta($postID, $countKey, $count);
+    }
+}

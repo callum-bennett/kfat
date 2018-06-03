@@ -24,6 +24,8 @@ get_header(); ?>
 				comments_template();
 			endif;
 
+            set_post_views(get_the_ID());
+
 		endwhile; // End of the loop.
 		?>
 
