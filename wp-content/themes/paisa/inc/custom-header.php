@@ -8,16 +8,16 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Ignis
+ * @package Paisa
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses ignis_header_style()
+ * @uses paisa_header_style()
  */
-function ignis_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'ignis_custom_header_args', array(
+function paisa_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'paisa_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/images/header.jpeg',
 		'video'					 => true,
 		'default-text-color'     => '000000',
@@ -26,18 +26,18 @@ function ignis_custom_header_setup() {
 		'flex-height'            => true,
 		'flex-width'			 => true,
 		'header-text'			 => false,
-		'wp-head-callback'       => 'ignis_header_style',
+		'wp-head-callback'       => 'paisa_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'ignis_custom_header_setup' );
+add_action( 'after_setup_theme', 'paisa_custom_header_setup' );
 
-if ( ! function_exists( 'ignis_header_style' ) ) :
+if ( ! function_exists( 'paisa_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see ignis_custom_header_setup().
+ * @see paisa_custom_header_setup().
  */
-function ignis_header_style() {
+function paisa_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

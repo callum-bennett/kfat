@@ -1,8 +1,8 @@
 <?php
 /**
- * Ignis Theme Customizer
+ * Paisa Theme Customizer
  *
- * @package Ignis
+ * @package Paisa
  */
 
 /**
@@ -10,49 +10,49 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function ignis_customize_register( $wp_customize ) {
+function paisa_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-    $wp_customize->get_section( 'header_image' )->panel = 'ignis_panel_header';
-    $wp_customize->get_section( 'colors' )->panel = 'ignis_panel_colors';
+    $wp_customize->get_section( 'header_image' )->panel = 'paisa_panel_header';
+    $wp_customize->get_section( 'colors' )->panel = 'paisa_panel_colors';
     $wp_customize->get_section( 'colors' )->priority = '10';
-    $wp_customize->get_section( 'colors' )->title = __('General', 'ignis');
+    $wp_customize->get_section( 'colors' )->title = __('General', 'paisa');
 
 
 
     // Panel: Header.
-    $wp_customize->add_panel( 'ignis_panel_header', array(
+    $wp_customize->add_panel( 'paisa_panel_header', array(
         'priority'       => 10,
-        'title'          => __( 'Header', 'ignis' ),
+        'title'          => __( 'Header', 'paisa' ),
     ) );
     // Section: Header text.
-    $wp_customize->add_section( 'ignis_section_header', array(
+    $wp_customize->add_section( 'paisa_section_header', array(
         'priority'       => 10,
-        'panel'          => 'ignis_panel_header',
-        'title'          => __( 'Header text', 'ignis' ),
+        'panel'          => 'paisa_panel_header',
+        'title'          => __( 'Header text', 'paisa' ),
     ) );
     // Setting: Hero title.
     $wp_customize->add_setting( 'header_title', array(
         'sanitize_callback'    => 'wp_kses_post',
-        'default'              => __( 'My name is Joe<span class="color-primary">.</span><br> I\'m a ', 'ignis'),
+        'default'              => __( 'My name is Joe<span class="color-primary">.</span><br> I\'m a ', 'paisa'),
     ) );
     // Control: Hero title
     $wp_customize->add_control( 'header_title', array(
-        'label'       => __( 'Hero title', 'ignis' ),
-        'section'     => 'ignis_section_header',
+        'label'       => __( 'Hero title', 'paisa' ),
+        'section'     => 'paisa_section_header',
         'type'        => 'text',
         'settings'    => 'header_title',
     ) );
     // Setting: Hero subtitle.
     $wp_customize->add_setting( 'header_subtitle', array(
         'sanitize_callback'    => 'wp_kses_post',
-        'default'              => __( 'Scroll down to begin your adventure', 'ignis')
+        'default'              => __( 'Scroll down to begin your adventure', 'paisa')
     ) );
     // Control: Hero subtitle
     $wp_customize->add_control( 'header_subtitle', array(
-        'label'       => __( 'Hero subtitle', 'ignis' ),
-        'section'     => 'ignis_section_header',
+        'label'       => __( 'Hero subtitle', 'paisa' ),
+        'section'     => 'paisa_section_header',
         'type'        => 'text',
         'settings'    => 'header_subtitle',
     ) );    
@@ -64,24 +64,24 @@ function ignis_customize_register( $wp_customize ) {
 	
 	// Control: Typed strings.
 	$wp_customize->add_control( 'typed_strings', array(
-		'label'       => __( 'Animated typing', 'ignis' ),
-        'description' => __( 'Start each new line with <strong>^</strong>, as shown below for the default values', 'ignis' ),        
-		'section'     => 'ignis_section_header',
+		'label'       => __( 'Animated typing', 'paisa' ),
+        'description' => __( 'Start each new line with <strong>^</strong>, as shown below for the default values', 'paisa' ),
+		'section'     => 'paisa_section_header',
 		'type'        => 'textarea',
 		'settings'    => 'typed_strings',
 	) );
     // Section: Menu.
-    $wp_customize->add_section( 'ignis_section_menu', array(
+    $wp_customize->add_section( 'paisa_section_menu', array(
         'priority'       => 13,
-        'panel'          => 'ignis_panel_header',
-        'title'          => __( 'Menu options', 'ignis' ),
+        'panel'          => 'paisa_panel_header',
+        'title'          => __( 'Menu options', 'paisa' ),
     ) );
     //Sticky menu
     $wp_customize->add_setting(
         'sticky_menu',
         array(
             'default'           =>  'sticky-header',
-            'sanitize_callback' => 'ignis_sanitize_sticky',
+            'sanitize_callback' => 'paisa_sanitize_sticky',
         )
     );
     $wp_customize->add_control(
@@ -89,27 +89,27 @@ function ignis_customize_register( $wp_customize ) {
         array(
             'type' => 'radio',
             'priority'    => 10,
-            'label' => __('Sticky menu', 'ignis'),
-            'section' => 'ignis_section_menu',
+            'label' => __('Sticky menu', 'paisa'),
+            'section' => 'paisa_section_menu',
             'choices' => array(
-                'sticky-header'   => __('Sticky', 'ignis'),
-                'static-header'   => __('Static', 'ignis'),
+                'sticky-header'   => __('Sticky', 'paisa'),
+                'static-header'   => __('Static', 'paisa'),
             ),
         )
     );
 
 
 	// Panel: Typography.
-	$wp_customize->add_panel( 'ignis_typography', array(
+	$wp_customize->add_panel( 'paisa_typography', array(
 		'priority'       => 21,
-		'title'          => __( 'Typography', 'ignis' ),
-		'description'    => __( 'Panle Description.', 'ignis' ),
+		'title'          => __( 'Typography', 'paisa' ),
+		'description'    => __( 'Panle Description.', 'paisa' ),
 	) );
 	// Section: Fonts.
-	$wp_customize->add_section( 'ignis_fonts', array(
+	$wp_customize->add_section( 'paisa_fonts', array(
 		'priority'       => 10,
-		'panel'          => 'ignis_typography',
-		'title'          => __( 'Fonts', 'ignis' ),
+		'panel'          => 'paisa_typography',
+		'title'          => __( 'Fonts', 'paisa' ),
 	) );
 	
     //Headings
@@ -117,15 +117,15 @@ function ignis_customize_register( $wp_customize ) {
         'headings_font_family',
         array(
             'default'           => 'Poppins',
-            'sanitize_callback' => 'ignis_sanitize_text',
+            'sanitize_callback' => 'paisa_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'headings_font_family',
         array(
             'type'        => 'text',
-            'label'       => __('Headings font', 'ignis'),
-            'section'     => 'ignis_fonts',
+            'label'       => __('Headings font', 'paisa'),
+            'section'     => 'paisa_fonts',
         )
     );
     //Body
@@ -133,22 +133,22 @@ function ignis_customize_register( $wp_customize ) {
         'body_font_family',
         array(
             'default'           => 'Nunito',
-            'sanitize_callback'	=> 'ignis_sanitize_text'
+            'sanitize_callback'	=> 'paisa_sanitize_text'
         )
     );
     $wp_customize->add_control(
         'body_font_family',
         array(
             'type'        => 'text',
-            'label'       => __('Body font', 'ignis'),
-            'section'     => 'ignis_fonts',
+            'label'       => __('Body font', 'paisa'),
+            'section'     => 'paisa_fonts',
         )
     );
     // Section: Font sizes.
-    $wp_customize->add_section( 'ignis_font_sizes', array(
+    $wp_customize->add_section( 'paisa_font_sizes', array(
         'priority'       => 11,
-        'panel'          => 'ignis_typography',
-        'title'          => __( 'Font sizes', 'ignis' ),
+        'panel'          => 'paisa_typography',
+        'title'          => __( 'Font sizes', 'paisa' ),
     ) );
     // Site title
     $wp_customize->add_setting(
@@ -162,8 +162,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'site_title_size', array(
         'type'        => 'number',
         'priority'    => 10,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Site title', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Site title', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 80,
@@ -182,8 +182,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'site_desc_size', array(
         'type'        => 'number',
         'priority'    => 11,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Site description', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Site description', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 80,
@@ -202,8 +202,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'hero_text_size', array(
         'type'        => 'number',
         'priority'    => 12,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Home hero text', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Home hero text', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 120,
@@ -222,8 +222,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'menu_items', array(
         'type'        => 'number',
         'priority'    => 13,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Menu items', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Menu items', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 40,
@@ -242,8 +242,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'body_size', array(
         'type'        => 'number',
         'priority'    => 14,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Body', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Body', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 80,
@@ -262,8 +262,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'index_post_title', array(
         'type'        => 'number',
         'priority'    => 15,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Index post titles', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Index post titles', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 80,
@@ -282,8 +282,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'single_post_title', array(
         'type'        => 'number',
         'priority'    => 16,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Banner titles (singles, archives etc.)', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Banner titles (singles, archives etc.)', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 80,
@@ -302,8 +302,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'sidebar_widgets_title', array(
         'type'        => 'number',
         'priority'    => 17,
-        'section'     => 'ignis_font_sizes',
-        'label'       => __('Sidebar widget titles', 'ignis'),
+        'section'     => 'paisa_font_sizes',
+        'label'       => __('Sidebar widget titles', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 80,
@@ -312,9 +312,9 @@ function ignis_customize_register( $wp_customize ) {
     ) );
 
     // Panel: Colors.
-     $wp_customize->add_panel( 'ignis_panel_colors', array(
+     $wp_customize->add_panel( 'paisa_panel_colors', array(
          'priority'       => 21,
-         'title'          => __( 'Colors', 'ignis' ),
+         'title'          => __( 'Colors', 'paisa' ),
      ) );
     //Primary color
     $wp_customize->add_setting(
@@ -329,7 +329,7 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'primary_color',
             array(
-                'label'         => __('Primary color', 'ignis'),
+                'label'         => __('Primary color', 'paisa'),
                 'section'       => 'colors',
                 'priority'      => 10
             )
@@ -348,7 +348,7 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'secondary_color',
             array(
-                'label'         => __('Secondary color', 'ignis'),
+                'label'         => __('Secondary color', 'paisa'),
                 'section'       => 'colors',
                 'priority'      => 11
             )
@@ -368,7 +368,7 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'body_text_color',
             array(
-                'label' => __('Body text', 'ignis'),
+                'label' => __('Body text', 'paisa'),
                 'section' => 'colors',
                 'settings' => 'body_text_color',
                 'priority' => 12
@@ -376,10 +376,10 @@ function ignis_customize_register( $wp_customize ) {
         )
     );    
     // Section: Header colors.
-    $wp_customize->add_section( 'ignis_section_header_colors', array(
+    $wp_customize->add_section( 'paisa_section_header_colors', array(
         'priority'       => 11,
-        'panel'          => 'ignis_panel_colors',
-        'title'          => __( 'Header', 'ignis' ),
+        'panel'          => 'paisa_panel_colors',
+        'title'          => __( 'Header', 'paisa' ),
     ) );
     //Site title
     $wp_customize->add_setting(
@@ -395,8 +395,8 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'site_title_color',
             array(
-                'label' => __('Site title', 'ignis'),
-                'section' => 'ignis_section_header_colors',
+                'label' => __('Site title', 'paisa'),
+                'section' => 'paisa_section_header_colors',
                 'settings' => 'site_title_color',
                 'priority' => 10
             )
@@ -416,8 +416,8 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'site_desc_color',
             array(
-                'label' => __('Site description', 'ignis'),
-                'section' => 'ignis_section_header_colors',
+                'label' => __('Site description', 'paisa'),
+                'section' => 'paisa_section_header_colors',
                 'priority' => 11
             )
         )
@@ -436,8 +436,8 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'home_hero_color',
             array(
-                'label' => __('Home hero text', 'ignis'),
-                'section' => 'ignis_section_header_colors',
+                'label' => __('Home hero text', 'paisa'),
+                'section' => 'paisa_section_header_colors',
                 'priority' => 11
             )
         )
@@ -456,8 +456,8 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'home_hero_subtext_color',
             array(
-                'label' => __('Home hero subtext', 'ignis'),
-                'section' => 'ignis_section_header_colors',
+                'label' => __('Home hero subtext', 'paisa'),
+                'section' => 'paisa_section_header_colors',
                 'priority' => 11
             )
         )
@@ -476,18 +476,18 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'banner_titles_color',
             array(
-                'label' => __('Banner titles', 'ignis'),
-                'section' => 'ignis_section_header_colors',
+                'label' => __('Banner titles', 'paisa'),
+                'section' => 'paisa_section_header_colors',
                 'priority' => 11
             )
         )
     );
 
     // Section: Menu colors.
-    $wp_customize->add_section( 'ignis_section_menu_colors', array(
+    $wp_customize->add_section( 'paisa_section_menu_colors', array(
         'priority'       => 12,
-        'panel'          => 'ignis_panel_colors',
-        'title'          => __( 'Menu', 'ignis' ),
+        'panel'          => 'paisa_panel_colors',
+        'title'          => __( 'Menu', 'paisa' ),
     ) );    
     //Menu items
     $wp_customize->add_setting(
@@ -503,8 +503,8 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'menu_items_color',
             array(
-                'label' => __('Menu items', 'ignis'),
-                'section' => 'ignis_section_menu_colors',
+                'label' => __('Menu items', 'paisa'),
+                'section' => 'paisa_section_menu_colors',
                 'priority' => 12
             )
         )
@@ -523,8 +523,8 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'mobile_btn_color',
             array(
-                'label' => __('Mobile button color', 'ignis'),
-                'section' => 'ignis_section_menu_colors',
+                'label' => __('Mobile button color', 'paisa'),
+                'section' => 'paisa_section_menu_colors',
                 'priority' => 13
             )
         )
@@ -543,8 +543,8 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'mobile_menu_bg',
             array(
-                'label' => __('Mobile menu background', 'ignis'),
-                'section' => 'ignis_section_menu_colors',
+                'label' => __('Mobile menu background', 'paisa'),
+                'section' => 'paisa_section_menu_colors',
                 'priority' => 14
             )
         )
@@ -563,37 +563,37 @@ function ignis_customize_register( $wp_customize ) {
             $wp_customize,
             'mobile_menu_items',
             array(
-                'label' => __('Mobile menu items', 'ignis'),
-                'section' => 'ignis_section_menu_colors',
+                'label' => __('Mobile menu items', 'paisa'),
+                'section' => 'paisa_section_menu_colors',
                 'priority' => 15
             )
         )
     );
 
     // Section: Blog options.
-    $wp_customize->add_section( 'ignis_section_blog', array(
+    $wp_customize->add_section( 'paisa_section_blog', array(
         'priority'       => 21,
-        'title'          => __( 'Blog options', 'ignis' ),
+        'title'          => __( 'Blog options', 'paisa' ),
     ) );
     // Blog layout  
     $wp_customize->add_setting(
         'blog_layout',
         array(
             'default'           => 'masonry-fullwidth',
-            'sanitize_callback' => 'ignis_sanitize_blog',
+            'sanitize_callback' => 'paisa_sanitize_blog',
         )
     );
     $wp_customize->add_control(
         'blog_layout',
         array(
             'type'      => 'radio',
-            'label'     => __('Blog layout', 'ignis'),
-            'section'   => 'ignis_section_blog',
+            'label'     => __('Blog layout', 'paisa'),
+            'section'   => 'paisa_section_blog',
             'priority'  => 10,
             'choices'   => array(
-                'classic'           => __( 'Classic', 'ignis' ),
-                'masonry'           => __( 'Masonry', 'ignis' ),
-                'masonry-fullwidth' => __( 'Masonry fullwidth', 'ignis' )
+                'classic'           => __( 'Classic', 'paisa' ),
+                'masonry'           => __( 'Masonry', 'paisa' ),
+                'masonry-fullwidth' => __( 'Masonry fullwidth', 'paisa' )
             ),
         )
     );    
@@ -608,8 +608,8 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'exc_length', array(
         'type'        => 'number',
         'priority'    => 13,
-        'section'   => 'ignis_section_blog',
-        'label'       => __('Excerpt length', 'ignis'),
+        'section'   => 'paisa_section_blog',
+        'label'       => __('Excerpt length', 'paisa'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 200,
@@ -621,15 +621,15 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'read_more_text',
         array(
-            'sanitize_callback' => 'ignis_sanitize_text',
-            'default'           => __( 'Continue reading', 'ignis' ),
+            'sanitize_callback' => 'paisa_sanitize_text',
+            'default'           => __( 'Continue reading', 'paisa' ),
         )       
     );
     $wp_customize->add_control( 'read_more_text', array(
         'type'        => 'text',
         'priority'    => 14,
-        'section'   => 'ignis_section_blog',
-        'label'       => __('Read more text', 'ignis'),
+        'section'   => 'paisa_section_blog',
+        'label'       => __('Read more text', 'paisa'),
     ) );
 
 
@@ -637,7 +637,7 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
       'hide_meta_singles',
       array(
-        'sanitize_callback' => 'ignis_sanitize_checkbox',
+        'sanitize_callback' => 'paisa_sanitize_checkbox',
         'default' => 0,     
       )   
     );
@@ -645,15 +645,15 @@ function ignis_customize_register( $wp_customize ) {
       'hide_meta_singles',
       array(
         'type' => 'checkbox',
-        'label' => __('Hide meta on single posts?', 'ignis'),
-        'section' => 'ignis_section_blog',
+        'label' => __('Hide meta on single posts?', 'paisa'),
+        'section' => 'paisa_section_blog',
         'priority' => 15,
       )
     );
     $wp_customize->add_setting(
       'hide_meta_index',
       array(
-        'sanitize_callback' => 'ignis_sanitize_checkbox',
+        'sanitize_callback' => 'paisa_sanitize_checkbox',
         'default' => 0,     
       )   
     );
@@ -661,8 +661,8 @@ function ignis_customize_register( $wp_customize ) {
       'hide_meta_index',
       array(
         'type' => 'checkbox',
-        'label' => __('Hide meta on blog index?', 'ignis'),
-        'section' => 'ignis_section_blog',
+        'label' => __('Hide meta on blog index?', 'paisa'),
+        'section' => 'paisa_section_blog',
         'priority' => 16,
       )
     );    
@@ -670,38 +670,38 @@ function ignis_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'hide_featured_singles',
         array(
-            'sanitize_callback' => 'ignis_sanitize_checkbox',
+            'sanitize_callback' => 'paisa_sanitize_checkbox',
         )       
     );
     $wp_customize->add_control(
         'hide_featured_singles',
         array(
             'type' => 'checkbox',
-            'label' => __('Hide featured images on single posts?', 'ignis'),
-            'section' => 'ignis_section_blog',
+            'label' => __('Hide featured images on single posts?', 'paisa'),
+            'section' => 'paisa_section_blog',
             'priority' => 17,
         )
     );    
 
 }
-add_action( 'customize_register', 'ignis_customize_register' );
+add_action( 'customize_register', 'paisa_customize_register' );
 
 /**
  * Sanitize
  */
 
 //Text
-function ignis_sanitize_text( $input ) {
+function paisa_sanitize_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
 //Blog layout
-function ignis_sanitize_blog( $input ) {
+function paisa_sanitize_blog( $input ) {
     if ( in_array( $input, array( 'classic', 'masonry', 'masonry-fullwidth' ), true ) ) {
         return $input;
     }
 }
 //Checkboxes
-function ignis_sanitize_checkbox( $input ) {
+function paisa_sanitize_checkbox( $input ) {
     if ( $input == 1 ) {
         return 1;
     } else {
@@ -709,7 +709,7 @@ function ignis_sanitize_checkbox( $input ) {
     }
 }
 //Menu style
-function ignis_sanitize_sticky( $input ) {
+function paisa_sanitize_sticky( $input ) {
     if ( in_array( $input, array( 'sticky-header', 'static-header' ), true ) ) {
         return $input;
     }
@@ -717,7 +717,7 @@ function ignis_sanitize_sticky( $input ) {
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function ignis_customize_preview_js() {
-	wp_enqueue_script( 'ignis_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170605', true );
+function paisa_customize_preview_js() {
+	wp_enqueue_script( 'paisa_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170605', true );
 }
-add_action( 'customize_preview_init', 'ignis_customize_preview_js' );
+add_action( 'customize_preview_init', 'paisa_customize_preview_js' );

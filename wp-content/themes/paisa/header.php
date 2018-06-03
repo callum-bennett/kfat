@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Ignis
+ * @package Paisa
  */
 
 ?><!DOCTYPE html>
@@ -28,13 +28,13 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ignis' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'paisa' ); ?></a>
 
-	<?php //Used for ignis_header_bar() 
-	do_action('ignis_header'); ?>
+	<?php //Used for paisa_header_bar()
+	do_action('paisa_header'); ?>
 	
-	<?php //Used for ignis_header_hero() 
-	do_action('ignis_after_header'); ?>
+	<?php //Used for paisa_header_hero()
+	do_action('paisa_after_header'); ?>
 
 	<div id="content" class="site-content clearfix">
 		<div class="container">

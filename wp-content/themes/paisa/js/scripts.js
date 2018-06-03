@@ -1,5 +1,5 @@
 
-/* Unminified versions of these scripts are available in ignis/js */
+/* Unminified versions of these scripts are available in paisa/js */
 
 /*!
  * Isotope PACKAGED v3.0.3

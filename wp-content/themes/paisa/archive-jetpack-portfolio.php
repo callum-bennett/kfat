@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Ignis
+ * @package Paisa
  */
 
 get_header();

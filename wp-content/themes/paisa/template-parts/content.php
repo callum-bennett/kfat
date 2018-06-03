@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Ignis
+ * @package Paisa
  */
 
 $hide_meta = get_theme_mod( 'hide_meta_index' );
@@ -23,12 +23,12 @@ $hide_meta = get_theme_mod( 'hide_meta_index' );
 		<header class="entry-header">
 			<?php 
 			if ( $hide_meta != 1 ) { 
-				ignis_show_cats();
+				paisa_show_cats();
 			} ?>
 			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 			<?php if ( 'post' === get_post_type() && $hide_meta != 1) : ?>
 			<div class="entry-meta">
-				<?php ignis_posted_on(); ?>
+				<?php paisa_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php
 			endif; ?>			
@@ -38,7 +38,7 @@ $hide_meta = get_theme_mod( 'hide_meta_index' );
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-footer">
-			<a class="post-read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo esc_html( get_theme_mod( 'read_more_text', __( 'Continue reading', 'ignis' ) ) ); ?></a>
+			<a class="post-read-more" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo esc_html( get_theme_mod( 'read_more_text', __( 'Continue reading', 'paisa' ) ) ); ?></a>
 		</footer>
 	</div>
 </article><!-- #post-## -->

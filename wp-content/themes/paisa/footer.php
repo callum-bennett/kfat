@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Ignis
+ * @package Paisa
  */
 
 ?>
@@ -15,7 +15,7 @@
 
 
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
-		<?php do_action( 'ignis_footer' ); ?> 
+		<?php do_action( 'paisa_footer' ); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

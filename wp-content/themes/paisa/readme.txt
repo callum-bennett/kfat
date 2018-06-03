@@ -1,4 +1,4 @@
-=== Ignis ===
+=== Paisa ===
 
 Contributors: athemes
 Tags: portfolio, blog, two-columns, right-sidebar, custom-colors, full-width-template, custom-background, custom-header, custom-menu, custom-logo, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Ignis is a modern portfolio theme that features a custom home page template for displaying your projects, color and font options, multiple blog layouts and much more. In order to use the portfolio feature in Ignis, you need to have Jetpack installed.
+Paisa is a modern portfolio theme that features a custom home page template for displaying your projects, color and font options, multiple blog layouts and much more. In order to use the portfolio feature in Paisa, you need to have Jetpack installed.
 
 == Installation ==
 
@@ -23,7 +23,7 @@ Ignis is a modern portfolio theme that features a custom home page template for 
 
 = Does this theme support any plugins? =
 
-Ignis includes support for the Portfolio custom post type from Jetpack.
+Paisa includes support for the Portfolio custom post type from Jetpack.
 
 == Changelog ==
 

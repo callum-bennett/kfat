@@ -44,10 +44,10 @@ get_header(); ?>
 					if ($project_query->max_num_pages > 1) { ?>
 					<nav class="posts-navigation">
 					    <div class="prev-posts-link">
-					      <?php echo get_next_posts_link( __( 'Older entries', 'ignis' ), $project_query->max_num_pages ); ?>
+					      <?php echo get_next_posts_link( __( 'Older entries', 'paisa' ), $project_query->max_num_pages ); ?>
 					    </div>
 					    <div class="next-posts-link">
-					      <?php echo get_previous_posts_link( __( 'Newer entries', 'ignis' ) ); ?>
+					      <?php echo get_previous_posts_link( __( 'Newer entries', 'paisa' ) ); ?>
 					    </div>
 					</nav>
 					<?php } 
@@ -58,16 +58,16 @@ get_header(); ?>
 
 				<section class="no-results not-found">
 					<header class="page-header">
-						<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'ignis' ); ?></h1>
+						<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'paisa' ); ?></h1>
 					</header>
 					<div class="page-content">
 						<?php if ( current_user_can( 'publish_posts' ) ) : ?>
 
-							<p><?php printf( wp_kses( __( 'Ready to publish your first project? <a href="%1$s">Get started here</a>.', 'ignis' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php?post_type=jetpack-portfolio' ) ) ); ?></p>
+							<p><?php printf( wp_kses( __( 'Ready to publish your first project? <a href="%1$s">Get started here</a>.', 'paisa' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php?post_type=jetpack-portfolio' ) ) ); ?></p>
 
 						<?php else : ?>
 
-							<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'ignis' ); ?></p>
+							<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'paisa' ); ?></p>
 							<?php get_search_form(); ?>
 
 						<?php endif; ?>

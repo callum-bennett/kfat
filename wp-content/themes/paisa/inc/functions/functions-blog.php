@@ -7,7 +7,7 @@
 /**
  * Excerpt length
  */
-function ignis_excerpt_length( $length ) {
+function paisa_excerpt_length( $length ) {
     if ( is_admin() ) {
         return $length;
     }
@@ -15,14 +15,14 @@ function ignis_excerpt_length( $length ) {
     $excerpt = get_theme_mod('exc_length', '20');
     return intval( $excerpt );
 }
-add_filter( 'excerpt_length', 'ignis_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'paisa_excerpt_length', 999 );
 
 /**
  * Single posts
  */
-function ignis_fullwidth_singles($classes) {
+function paisa_fullwidth_singles($classes) {
 
-    $layout = ignis_blog_layout();
+    $layout = paisa_blog_layout();
 
 	$classes[] = 'clearfix';
 
@@ -36,12 +36,12 @@ function ignis_fullwidth_singles($classes) {
 
 	return $classes;
 }
-add_filter( 'post_class', 'ignis_fullwidth_singles' );
+add_filter( 'post_class', 'paisa_fullwidth_singles' );
 
 /**
  * Blog layout
  */
-function ignis_blog_layout() {
+function paisa_blog_layout() {
 	$layout = get_theme_mod( 'blog_layout', 'masonry-fullwidth' );
 	return $layout;
 }
@@ -49,7 +49,7 @@ function ignis_blog_layout() {
 /**
  * Archive titles
  */
-function ignis_archive_title( $title ) {
+function paisa_archive_title( $title ) {
     if ( is_category() ) {
         $title = single_cat_title( '', false );
     } elseif ( is_tag() ) {
@@ -65,4 +65,4 @@ function ignis_archive_title( $title ) {
     return $title;
 }
  
-add_filter( 'get_the_archive_title', 'ignis_archive_title' );
+add_filter( 'get_the_archive_title', 'paisa_archive_title' );

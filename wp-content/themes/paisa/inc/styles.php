@@ -1,17 +1,17 @@
 <?php
 /**
- * @package Ignis
+ * @package Paisa
  */
 
 
 //Dynamic styles
-function ignis_custom_styles($custom) {
+function paisa_custom_styles($custom) {
 
 	$custom = '';
 
 	if ( is_page_template( 'post-templates/post_nosidebar_featured.php' ) ) {
 		$featured_image = get_the_post_thumbnail_url();
-	    $custom .= ".ignis-hero-area { background-image: url(" . esc_url( $featured_image ) . "); }"."\n";
+	    $custom .= ".paisa-hero-area { background-image: url(" . esc_url( $featured_image ) . "); }"."\n";
 	}
 
 	//Typography
@@ -86,7 +86,7 @@ function ignis_custom_styles($custom) {
 	//Colors
 	$primary_color = get_theme_mod( 'primary_color', '#ff6b7e' );
 	$custom .= ".woocommerce a.remove,.main-navigation a:hover,a,a:hover,.color-primary { color:" . esc_attr($primary_color) . "}"."\n";
-	$custom .= ".woocommerce input.button.alt,.woocommerce input.button.alt:hover,.woocommerce span.onsale,.portfolio-thumbnail::after,.social-navigation a:hover,.post-template-post_nosidebar_featured .ignis-hero-area::after,.jetpack-portfolio-template-post_nosidebar_featured .ignis-hero-area::after,.main-navigation .menu-icon a:hover,.woocommerce div.product form.cart .button,.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.button,button,input[type=\"button\"],input[type=\"reset\"],input[type=\"submit\"],.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,.woocommerce div.product form.cart .button:hover,.button:hover,button:hover,input[type=\"button\"]:hover,input[type=\"reset\"]:hover,input[type=\"submit\"]:hover { background-color:" . esc_attr($primary_color) . "}"."\n";
+	$custom .= ".woocommerce input.button.alt,.woocommerce input.button.alt:hover,.woocommerce span.onsale,.portfolio-thumbnail::after,.social-navigation a:hover,.post-template-post_nosidebar_featured .paisa-hero-area::after,.jetpack-portfolio-template-post_nosidebar_featured .paisa-hero-area::after,.main-navigation .menu-icon a:hover,.woocommerce div.product form.cart .button,.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.button,button,input[type=\"button\"],input[type=\"reset\"],input[type=\"submit\"],.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,.woocommerce div.product form.cart .button:hover,.button:hover,button:hover,input[type=\"button\"]:hover,input[type=\"reset\"]:hover,input[type=\"submit\"]:hover { background-color:" . esc_attr($primary_color) . "}"."\n";
 	$secondary_color = get_theme_mod( 'secondary_color', '#37c9df' );
 	$custom .= ".typed-cursor,.typed-element,.portfolio-entry-meta a:hover,.cat-links a:hover,.woocommerce-message::before { color:" . esc_attr($secondary_color) . "}"."\n";
 	$custom .= ".woocommerce-message,.portfolio-entry-meta a:hover,.cat-links a:hover,.portfolio-entry-meta a,.cat-links a { border-color:" . esc_attr($secondary_color) . "}"."\n";
@@ -116,6 +116,6 @@ function ignis_custom_styles($custom) {
 	$custom .= "#mainnav-mobi a { color:" . esc_attr($mobile_menu_items) . "}"."\n";
 
 	//Output all the styles
-	wp_add_inline_style( 'ignis-style', $custom );	
+	wp_add_inline_style( 'paisa-style', $custom );
 }
-add_action( 'wp_enqueue_scripts', 'ignis_custom_styles' );
+add_action( 'wp_enqueue_scripts', 'paisa_custom_styles' );

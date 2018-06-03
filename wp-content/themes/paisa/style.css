@@ -1,19 +1,19 @@
 /*
-Theme Name: Ignis
-Theme URI: https://athemes.com/theme/ignis/
+Theme Name: Paisa
+Theme URI: https://athemes.com/theme/paisa/
 Author: aThemes.com
 Author URI: https://athemes.com
-Description: Ignis is a modern portfolio theme that features a custom home page template for displaying your projects, color and font options, multiple blog layouts and much more. In order to use the portfolio feature in Ignis, you need to have Jetpack installed.
+Description: Paisa is a modern portfolio theme that features a custom home page template for displaying your projects, color and font options, multiple blog layouts and much more. In order to use the portfolio feature in Paisa, you need to have Jetpack installed.
 Version: 1.0.2
 License: GNU General Public License v3
 License URI: LICENSE
-Text Domain: ignis
+Text Domain: paisa
 Tags: portfolio, blog, two-columns, right-sidebar, custom-colors, full-width-template, custom-background, custom-header, custom-menu, custom-logo, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Ignis is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Paisa is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
@@ -900,7 +900,7 @@ img {
 	margin-top: 90px;
 	margin-bottom: 90px;
 }
-.ignis-hero-area {
+.paisa-hero-area {
 	background-color: #fff0ea;
 	position: relative;
 	background-size: cover;
@@ -913,8 +913,8 @@ img {
 .jetpack-portfolio-template-post_nosidebar .post-thumbnail {
 	text-align: center;
 }
-.post-template-post_nosidebar_featured .ignis-hero-area::after,
-.jetpack-portfolio-template-post_nosidebar_featured .ignis-hero-area::after {
+.post-template-post_nosidebar_featured .paisa-hero-area::after,
+.jetpack-portfolio-template-post_nosidebar_featured .paisa-hero-area::after {
 	background-color: #ff6b7e;
 	content: '';
 	width: 100%;
@@ -926,8 +926,8 @@ img {
 	opacity: 0;
 	transition: all 0.4s;
 }
-.post-template-post_nosidebar_featured .ignis-hero-area:hover::after,
-.jetpack-portfolio-template-post_nosidebar_featured .ignis-hero-area:hover::after {
+.post-template-post_nosidebar_featured .paisa-hero-area:hover::after,
+.jetpack-portfolio-template-post_nosidebar_featured .paisa-hero-area:hover::after {
 	opacity: 1;
 }
 .media-wrapper {
@@ -1018,15 +1018,15 @@ img {
 	margin-top: 30px;
 }
 /* Header media */
-.ignis-hero-area.has-media {
+.paisa-hero-area.has-media {
 }
-.ignis-hero-area.has-media .header-text {
+.paisa-hero-area.has-media .header-text {
 	padding: 0;
 	position: absolute;
 	width: 100%;
 	text-align: center;
 }
-.home .ignis-hero-area.has-media .header-text {
+.home .paisa-hero-area.has-media .header-text {
 	text-align: left;
 	padding-left: 45px;
 	top: 50%;
@@ -1601,14 +1601,14 @@ img {
 	}	
 }
 @media only screen and (max-width: 1024px) {
-	.ignis-hero-area.has-media {
+	.paisa-hero-area.has-media {
 		display: block;
 	}
-	.home .ignis-hero-area.has-media .header-text {
+	.home .paisa-hero-area.has-media .header-text {
 		top: 35%;
 		transform: none;
 	}
-	.ignis-hero-area {
+	.paisa-hero-area {
 		margin: 0;
 	}
 	.site-header,
@@ -1627,7 +1627,7 @@ img {
 	.social-navigation {
 		margin-bottom: 30px;
 	}
-	.home .ignis-hero-area.has-media .header-text {
+	.home .paisa-hero-area.has-media .header-text {
 		padding-left: 15px;
 	}
 	.widget {

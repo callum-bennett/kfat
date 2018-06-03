@@ -2,7 +2,7 @@
 /**
  * The template used for displaying projects on index view
  *
- * @package Ignis
+ * @package Paisa
  */
 ?>
 
@@ -17,7 +17,7 @@
 
 	<div class="portfolio-content">
 		<header class="entry-header">
-			<?php echo get_the_term_list( get_the_ID(), 'jetpack-portfolio-type', '<span class="portfolio-entry-meta">', esc_html_x(', ', 'Used between list items, there is a space after the comma.', 'ignis' ), '</span>' ); ?>
+			<?php echo get_the_term_list( get_the_ID(), 'jetpack-portfolio-type', '<span class="portfolio-entry-meta">', esc_html_x(', ', 'Used between list items, there is a space after the comma.', 'paisa' ), '</span>' ); ?>
 			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 		</header>
 	</div>
