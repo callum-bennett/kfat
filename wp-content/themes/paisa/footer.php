@@ -29,9 +29,14 @@
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
       if ((scroll + height*0.1) > height) {
-        $('.site-header').addClass('opaque');
+        $('.site-header').addClass('opaque-title');
       } else {
-        $('.site-header').removeClass('opaque');
+        $('.site-header').removeClass('opaque-title');
+      }
+      if ((scroll + height*0.25) > height) {
+        $('.site-header').addClass('opaque-menu');
+      } else {
+        $('.site-header').removeClass('opaque-menu');
       }
     });
   })(jQuery);

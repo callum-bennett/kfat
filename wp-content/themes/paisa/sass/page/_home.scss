@@ -1,0 +1,38 @@
+
+.most-popular {
+  background-color: #37c9df;
+  margin-top: 4rem;
+  padding-bottom: 8rem;
+  h2.section-heading {
+    padding: 8rem 0 4rem;
+  }
+  h2.entry-title {
+    min-height: 78px;
+  }
+  .entry-content {
+    display: none;
+  }
+
+  -webkit-transform: skewY(-7deg);
+  transform: skewY(-7deg);
+
+  > * {
+    -webkit-transform: skewY(6deg);
+    transform: skewY(6deg);
+  }
+}
+
+
+.most-read-loop {
+  article {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .post-thumbnail {
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    }
+  }
+
+}

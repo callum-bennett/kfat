@@ -21,7 +21,6 @@
 
     foreach ($icon_details as $title => $icon) {
 
-
         if ($icon['link'] != '') {
             $icon_style = '<style class="aps-icon-front-style">';
             $icon_counter++;
@@ -39,7 +38,7 @@
                 $tooltip_text = ($icon['tooltip_text'] == '') ? esc_attr($title) : esc_attr($icon['tooltip_text']);
                 ?>
                 <div class="aps-each-icon <?php echo $icon_main_class; ?>" style='margin:<?php echo str_replace('px', '', $icon_set->icon_margin); ?>px;' data-aps-tooltip='<?php echo $tooltip_text ?>' data-aps-tooltip-enabled="<?php echo $icon_set->icon_tooltip; ?>" data-aps-tooltip-bg="<?php echo $tooltip_bg = ($icon_set->tooltip_background == '') ? '#000' : $icon_set->tooltip_background; ?>" data-aps-tooltip-color="<?php echo ($icon_set->tooltip_text_color == '') ? '#fff' : $icon_set->tooltip_text_color; ?>">
-                    <a href="<?php echo $icon['link'] ?>" <?php echo $link_target; ?> class="<?php echo apply_filters('apsi_icon_class','aps-icon-link');?> animated <?php echo ($icon_set->icon_tooltip == 1) ? 'aps-tooltip' : ''; ?>" data-animation-class="<?php echo $icon_set->icon_animation; ?>">
+                    <a href="<?php echo $icon['link'] ?>" <?php echo $link_target; ?> class="<?php echo strtolower($icon['image_name']). ' ' .apply_filters('apsi_icon_class','aps-icon-link');?> animated <?php echo ($icon_set->icon_tooltip == 1) ? 'aps-tooltip' : ''; ?>" data-animation-class="<?php echo $icon_set->icon_animation; ?>">
                         <?php
                         $border_thickness = str_replace('px', '', $icon['border_thickness']);
                         $border_thickness = ($border_thickness == '') ? '1' : $border_thickness;

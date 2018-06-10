@@ -9,11 +9,11 @@
  * Footer menu
  */
 function paisa_footer_social_menu() {
-	if ( has_nav_menu( 'social' ) ) : ?>
+	//if ( has_nav_menu( 'social' ) ) : ?>
 		<nav class="social-navigation clearfix">
 			<?php wp_nav_menu( array( 'theme_location' => 'social', 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>', 'container_class' => 'container', 'menu_class' => 'menu clearfix', 'fallback_cb' => false ) ); ?>
 		</nav>
-	<?php endif;
+	<?php //endif;
 }
 add_action('paisa_footer', 'paisa_footer_social_menu', 8);
 

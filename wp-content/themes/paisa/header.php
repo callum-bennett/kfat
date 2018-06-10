@@ -38,4 +38,3 @@
 	do_action('paisa_after_header'); ?>
 
 	<div id="content" class="site-content clearfix">
-		<div class="container">

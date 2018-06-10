@@ -39,6 +39,7 @@ function paisa_header_bar() {
 			</div><!-- .site-branding -->
 			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="icon-menu"></i></div>
 			<nav id="site-navigation" class="main-navigation col-md-8" role="navigation">
+                <?php echo do_shortcode('[aps-social id="1"]')?>
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 				<div class="btn-close-menu">&times;</div>
 			</nav><!-- #site-navigation -->

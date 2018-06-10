@@ -1,0 +1,44 @@
+.aps-social-icon-wrapper {
+  border-right: solid 1px #aaa;
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 15px;
+
+  .aps-icon-link {
+    background-size: contain;
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(1px);
+      transition: transform .1s;
+    }
+
+    &.facebook {
+      background-image: url('images/facebook.png');
+    }
+    &.twitter {
+      background-image: url('images/twitter.png');
+    }
+    &.instagram {
+      background-image: url('images/instagram.png');
+    }
+
+    img {
+      visibility: hidden;
+    }
+  }
+}
+
+.opaque-menu .aps-social-icon-wrapper .aps-icon-link {
+
+  &.facebook {
+    background-image: url('images/facebook-dark.png');
+  }
+  &.twitter {
+    background-image: url('images/twitter-dark.png');
+  }
+  &.instagram {
+    background-image: url('images/instagram-dark.png');
+  }
+}
